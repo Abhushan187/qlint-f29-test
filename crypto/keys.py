@@ -1,8 +1,8 @@
 """Key generation helpers for the demo service."""
 
-from Crypto.PublicKey import RSA
+import oqs
 
 
 def make_transport_key():
-    key = RSA.generate(2048)
-    return key
+    kem = oqs.KeyEncapsulation('ML-KEM-768')
+    return kem.generate_keypair()
