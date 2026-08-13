@@ -1,5 +1,7 @@
 """Key generation helpers for the demo service."""
 
+import logging
+
 from Crypto.PublicKey import RSA
 
 
